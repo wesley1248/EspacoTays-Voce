@@ -38,7 +38,6 @@ public class ProdutoMap : IEntityTypeConfiguration<Produto>
         builder.Property(p => p.Ativo)
             .HasColumnName("c01_ativo");
 
-        builder.Property()
-
+        // continuar o mapping
     }
 }
