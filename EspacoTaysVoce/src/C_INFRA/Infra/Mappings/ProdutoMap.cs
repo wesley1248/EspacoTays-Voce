@@ -16,6 +16,8 @@ public class ProdutoMap : IEntityTypeConfiguration<Produto>
             .IsRequired()
             .HasMaxLength(36)
             .HasColumnName("c01_id");
+        builder.HasIndex(p => p.Id)
+            .HasDatabaseName("idx_id_prod");
 
         builder.Property(p => p.DataCadastro)
             .IsRequired()
@@ -38,6 +40,14 @@ public class ProdutoMap : IEntityTypeConfiguration<Produto>
         builder.Property(p => p.Ativo)
             .HasColumnName("c01_ativo");
 
-        // continuar o mapping
+        builder.Property(p => p.Imagem)
+            .IsRequired()
+            .HasMaxLength(500)
+            .HasColumnName("c01_imagem");
+
+        builder.Property(p => p.Tamanho)
+            .IsRequired()
+            .HasColumnName("c01_tamanho")
+            .HasColumnType("char(4)");
     }
 }
