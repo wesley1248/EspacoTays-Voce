@@ -3,17 +3,17 @@ using Domain.Entities;
 
 namespace Domain.Interfaces.Services;
 
-public interface IProduto
+public interface IProdutoService
 {
     Task NewProduto(Produto produto);
 
     Task ConsultarProduto(string id);
 
-    Task ObterTodosPaginado();
+    // Task ObterTodosPaginado();
 
-    Task DeleteProduto(string id);
+    // Task DeleteProduto(string id);
 
-    Task EditProduto(Produto produto);
+    // Task EditProduto(Produto produto);
 }
 
 
